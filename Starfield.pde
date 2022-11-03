@@ -22,7 +22,7 @@ void draw() {
 class thousandPeaks {
   double angle, x, y, speed;
   int size, starSize;
-  ascian() {
+  thousandPeaks() {
     x = width/2;
     y = height/2;
     angle = (Math.random()*3)*Math.PI;
