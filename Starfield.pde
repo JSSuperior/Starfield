@@ -56,10 +56,12 @@ class thousandPeaks {
   //Base star
   void show(){
     fill(255);
+    //Change from starsize to size
     ellipse((float)x,(float)y,starSize,starSize);
   }
   
   void hues(){
+  //change ellipse values to starsize
   for(int k = 0; k < (int)(Math.random()*5); k++){
       fill(255-(k*10),(int)(Math.random()*10)+50);
       //ellipse((float)x,(float)y,5+(k*5),5+(k*5));
