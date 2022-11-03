@@ -1,27 +1,25 @@
-ascian[] EmetSelch = new ascian[2000];
+thousandPeaks[] starsong = new thousandPeaks[2000];
 
 void setup(){
   fullScreen();
   noStroke();
-  for(int k = 0; k < EmetSelch.length; k++)
-    EmetSelch[k] = new ascian();
+  for(int k = 0; k < starsong.length; k++)
+    starsong[k] = new thousandPeaks();
 }
 
 void draw() {
   background(0);
   //fill(0,0,0,10);
   //rect(0,0,width,height);
-  //fill(255,0,0,10);
-  //redShift();
-  for(int i = 0; i < EmetSelch.length; i++){
-    EmetSelch[i].show();
-    EmetSelch[i].move();
-    EmetSelch[i].shift();
-    EmetSelch[i].hues();
+  for(int i = 0; i < starsong.length; i++){
+    starsong[i].show();
+    starsong[i].move();
+    starsong[i].shift();
+    starsong[i].hues();
   }
 }
 
-class ascian {
+class thousandPeaks {
   double angle, x, y, speed;
   int size, starSize;
   ascian() {
