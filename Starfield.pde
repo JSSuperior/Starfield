@@ -14,7 +14,7 @@ void setup(){
 }
 
 void draw() {
-  image(img,0,0,width/0.7,height/0.3);
+  image(img,0,0,width/0.3,height/0.7);
   noFill();
     stroke(255);
     strokeWeight(2);
