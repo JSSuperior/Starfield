@@ -1,5 +1,5 @@
 PImage img;
-thousandPeaks[] starsong = new thousandPeaks[1500];
+thousandPeaks[] starsong = new thousandPeaks[1000];
 
 
 void setup(){
