@@ -1,6 +1,7 @@
 PImage img;
 thousandPeaks[] starsong = new thousandPeaks[1000];
 
+
 void setup(){
   size(800,500);
   noStroke();
@@ -15,11 +16,11 @@ void setup(){
 void draw() {
   image(img,0,0);
   noFill();
-  stroke(255);
-  strokeWeight(2);
-  ellipse(width/2,height/2,width/3,height/4);
-  ellipse(width/2,height/2,width/2,height/3);
-  noStroke();
+    stroke(255);
+    strokeWeight(2);
+    ellipse(width/2,height/2,width/3,height/4);
+    ellipse(width/2,height/2,width/2,height/3);
+    noStroke();
   starsong[0].show();
   for(int i = 1; i < 20; i++){
     starsong[i].show();
@@ -29,6 +30,7 @@ void draw() {
     starsong[i].show();
     starsong[i].move();
   }
+  
 }
 
 class thousandPeaks {
@@ -86,5 +88,4 @@ class Eda extends thousandPeaks{
     for(int k = 0; k < size; k++)
       starSize = 5+(k);
   }
-}
 }
