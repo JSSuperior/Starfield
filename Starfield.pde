@@ -16,12 +16,11 @@ void setup(){
 void draw() {
   image(img,0,0,width/0.5,height/0.6);
   noFill();
-    stroke(255);
-    strokeWeight(1);
-    ellipse(width/2,height/2,width/3,height/5);
-    ellipse(width/2,height/2,width/2,height/4);
-    noStroke();
-  starsong[0].show();
+  stroke(255);
+  strokeWeight(1);
+  ellipse(width/2,height/2,width/3,height/5);
+  ellipse(width/2,height/2,width/2,height/4);
+  noStroke();
   for(int i = 1; i < 20; i++){
     starsong[i].show();
     starsong[i].move();
@@ -30,7 +29,7 @@ void draw() {
     starsong[i].show();
     starsong[i].move();
   }
-  
+  starsong[0].show();
 }
 
 class thousandPeaks {
