@@ -3,8 +3,8 @@ thousandPeaks[] starsong = new thousandPeaks[1000];
 
 
 void setup(){
-  fullScreen();
-  //size(800,500);
+  //fullScreen();
+  size(800,500);
   noStroke();
   starsong[0] = new Eda();
   for(int k = 1; k < 20; k++)
