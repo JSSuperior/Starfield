@@ -52,9 +52,9 @@ class thousandPeaks {
    y = y + Math.sin(angle)*speed;
    if(speed > 0)
       speed -= 0.05;
-    if(speed < 0){
+    /*if(speed < 0){
       speed = 0;
-    }
+    }*/
    }
    
   void show(){
