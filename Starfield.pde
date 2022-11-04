@@ -18,8 +18,8 @@ void draw() {
   noFill();
     stroke(255);
     strokeWeight(1);
-    ellipse(width/2,height/2,width/3,height/4);
-    ellipse(width/2,height/2,width/2,height/3);
+    ellipse(width/2,height/2,width/3,height/5);
+    ellipse(width/2,height/2,width/2,height/4);
     noStroke();
   starsong[0].show();
   for(int i = 1; i < 20; i++){
