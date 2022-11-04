@@ -73,7 +73,7 @@ class caves extends thousandPeaks{
     x = width/2;
     y = height/2;
     angle = (Math.random()*3)*Math.PI;
-    speed = Math.random()*10;
+    speed = Math.random()*7;
     size = (int)(Math.random()*10+5);
     for(int k = 0; k < size; k++)
       starSize = 4+(k);
