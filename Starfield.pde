@@ -2,7 +2,6 @@ PImage img;
 thousandPeaks[] starsong = new thousandPeaks[1000];
 
 void setup(){
-  //fullScreen();
   size(800,500);
   noStroke();
   starsong[0] = new Eda();
@@ -30,8 +29,6 @@ void draw() {
     starsong[i].show();
     starsong[i].move();
   }
-  //navRing();
-  
 }
 
 class thousandPeaks {
@@ -53,8 +50,9 @@ class thousandPeaks {
    y = y + Math.sin(angle)*speed;
    if(speed > 0)
       speed -= 0.05;
-    if(speed < 0)
+    if(speed < 0){
       speed = 0;
+    }
    }
    
   void show(){
@@ -89,20 +87,4 @@ class Eda extends thousandPeaks{
       starSize = 5+(k);
   }
 }
-
-
-void navRing(){
-  //int ringSize = 0;
-  //int ringSpeed = 6;
-  //noFill();
-  //stroke(255);
-  //strokeWeight(3);
-  //while(ringSize < 100){
-  //  ellipse(width/2,height/2,ringSize,ringSize);
-  //  ringSize++;
-  //}
-  //if(ringSpeed > 0)
-  //  ringSpeed-=0.02;
-  //if(ringSpeed < 0)
-  //  ringSpeed = 0;
 }
