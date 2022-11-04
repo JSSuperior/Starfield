@@ -17,7 +17,7 @@ void draw() {
   image(img,0,0,width/0.5,height/0.6);
   noFill();
     stroke(255);
-    strokeWeight(2);
+    strokeWeight(1);
     ellipse(width/2,height/2,width/3,height/4);
     ellipse(width/2,height/2,width/2,height/3);
     noStroke();
