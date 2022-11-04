@@ -10,7 +10,7 @@ void setup(){
     starsong[k] = new caves();
   for(int k = 20; k < starsong.length; k++)
     starsong[k] = new thousandPeaks();
-   img = loadImage("GalaxyS4.png");
+   img = loadImage("GalaxyS5.png");
 }
 
 void draw() {
