@@ -1,5 +1,5 @@
 PImage img;
-thousandPeaks[] starsong = new thousandPeaks[1000];
+thousandPeaks[] starsong = new thousandPeaks[1500];
 
 
 void setup(){
@@ -18,7 +18,7 @@ void draw() {
   noFill();
   stroke(255);
   strokeWeight(1);
-  ellipse(width/2,height/2,width/3,height/5);
+  ellipse(width/2,height/2,width/2.5,height/5);
   ellipse(width/2,height/2,width/2,height/4);
   noStroke();
   for(int i = 1; i < 20; i++){
