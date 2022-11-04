@@ -1,22 +1,37 @@
-thousandPeaks[] starsong = new thousandPeaks[2000];
+PImage img;
+thousandPeaks[] starsong = new thousandPeaks[1000];
 
 void setup(){
-  fullScreen();
+  //fullScreen();
+  size(800,500);
   noStroke();
-  for(int k = 0; k < starsong.length; k++)
+  starsong[0] = new Eda();
+  for(int k = 1; k < 20; k++)
+    starsong[k] = new caves();
+  for(int k = 20; k < starsong.length; k++)
     starsong[k] = new thousandPeaks();
+   img = loadImage("GalaxyS4.png");
 }
 
 void draw() {
-  background(0);
-  //fill(0,0,0,10);
-  //rect(0,0,width,height);
-  for(int i = 0; i < starsong.length; i++){
+  image(img,0,0);
+  noFill();
+  stroke(255);
+  strokeWeight(2);
+  ellipse(width/2,height/2,width/3,height/4);
+  ellipse(width/2,height/2,width/2,height/3);
+  noStroke();
+  starsong[0].show();
+  for(int i = 1; i < 20; i++){
     starsong[i].show();
     starsong[i].move();
-    starsong[i].shift();
-    starsong[i].hues();
   }
+  for(int i = 20; i < starsong.length; i++){
+    starsong[i].show();
+    starsong[i].move();
+  }
+  //navRing();
+  
 }
 
 class thousandPeaks {
@@ -36,36 +51,58 @@ class thousandPeaks {
   void move(){
    x = x + Math.cos(angle)*speed;
    y = y + Math.sin(angle)*speed;
-   
-   //if(x > 2000 || y > 2000){
-   //  x = width/2;
-   //  y = height/2;
-   //  //speed = Math.random()*10;
-   //  speed = 6;
-   //  angle = (Math.random()*3)*Math.PI;
-   //  }
-   }
-  
-  void shift(){
-    if(speed > 0)
-      speed = speed - 0.05;
+   if(speed > 0)
+      speed -= 0.05;
     if(speed < 0)
       speed = 0;
    }
    
-  //Base star
   void show(){
     fill(255);
-    //Change from starsize to size
-    ellipse((float)x,(float)y,starSize,starSize);
-  }
-  
-  void hues(){
-  //change ellipse values to starsize
-  for(int k = 0; k < (int)(Math.random()*5); k++){
+    ellipse((float)x,(float)y,size,size);
+    //Flicker
+    for(int k = 0; k < (int)(Math.random()*5); k++){
       fill(255-(k*10),(int)(Math.random()*10)+50);
-      //ellipse((float)x,(float)y,5+(k*5),5+(k*5));
+      ellipse((float)x,(float)y,starSize,starSize);
     }
   }
 }
 
+class caves extends thousandPeaks{
+  caves(){
+    x = width/2;
+    y = height/2;
+    angle = (Math.random()*3)*Math.PI;
+    speed = Math.random()*10;
+    size = (int)(Math.random()*10+5);
+    for(int k = 0; k < size; k++)
+      starSize = 4+(k);
+  }
+}
+
+class Eda extends thousandPeaks{
+  Eda(){
+    x = width/2;
+    y = height/2;
+    size = 40;
+    for(int k = 0; k < size; k++)
+      starSize = 5+(k);
+  }
+}
+
+
+void navRing(){
+  //int ringSize = 0;
+  //int ringSpeed = 6;
+  //noFill();
+  //stroke(255);
+  //strokeWeight(3);
+  //while(ringSize < 100){
+  //  ellipse(width/2,height/2,ringSize,ringSize);
+  //  ringSize++;
+  //}
+  //if(ringSpeed > 0)
+  //  ringSpeed-=0.02;
+  //if(ringSpeed < 0)
+  //  ringSpeed = 0;
+}
